@@ -10,14 +10,10 @@ public class Account {
 
     public boolean checkNameToEmboss() {
 
-        String regex = "(^[^ ][a-zA-z0-9а-яА-яёЁ]*\\s{1}[a-zA-z0-9а-яА-яёЁ]*[^ ]$)";
+        String regex = "(^[^ ][a-zA-z0-9а-яА-яёЁ\\.]*\\s{1}[a-zA-z0-9а-яА-яёЁ\\.]*[^ ]$)";
 
-        if (Pattern.matches(regex,name)) {
-            if (name.length() > 2 && name.length() < 20) {
-                return true;
-            } else {
-                return false;
-            }
+        if (name != null) {
+            return Pattern.matches(regex, name) && name.length() > 2 && name.length() < 20;
         } else {
             return false;
         }

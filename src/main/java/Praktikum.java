@@ -13,7 +13,7 @@ public class Praktikum {
         if (account.checkNameToEmboss()) {
             System.out.println("\nName is valid: " + name);
         } else {
-            System.out.println("\nName is not allowed: "+ name);
+            System.out.println("\nName is not allowed: " + name);
         }
 
     }
